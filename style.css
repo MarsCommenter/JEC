@@ -1,65 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+:root {
+
+    --primary-color: #233845;
+    --secondary-color: #36576b;
+    --accent-color: #0077b6;
+    --background-color: #efe8d9ff;
+    --text-color: #222;
+    --light-background: #fffcf2;
+    --dark-text: #111;
+}
+* {
+  box-sizing: border-box;
+}
+
+
 body{
-    font-family: 'Poppins', sans-serif;
+    padding-top: 80px;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.4;
     text-align: center;
     background-color: #efe8d9ff;   
     color: #233845;
+    
 }
 body p {
       font-size: 1.3rem;
-
     }
+  
 
 /* NAV BAR */
 
-nav ul{
-    list-style-type: none;
-    background-color: #233845;
-    overflow: hidden;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* ----- NAVBAR CONTAINER ----- */
+.navbar {
+  position: fixed;          /* Keeps the navbar stuck to the top even when scrolling */
+  top: 0;                   /* Ensures it stays at the very top of the page */
+  left: 0;
+  width: 100%;              /* Stretch across the full screen width */
+  background: var(--primary-color);        /* Light background for good readability */
+  display: flex;            /* Allows logo and links to sit side by side */
+  justify-content: space-between; /* Push logo left and links right */
+  align-items: center;      /* Vertically center the items inside */
+  padding: 0.8rem 5%;       /* Comfortable spacing around content */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow to separate navbar visually */
+  z-index: 1000;            /* Ensures it stays above other elements */
 }
-nav {
-    position: fixed;     /* keeps it stuck at the top */
-    top: 0;      
-    width: 100%;             /* make it span full width */     
+
+/* ----- LOGO IMAGE ----- */
+.nav-logo img {
+  height: 50px;             /* Keeps logo size consistent */
+  width: auto;              /* Keeps aspect ratio */
 }
-nav a{
-    text-decoration: none;
-    color: #fffcf2;
-    text-align: center;
-    display: block;
-    padding: 15px;
-    transition: background 0.5s;
+
+/* ----- NAV LINKS CONTAINER ----- */
+.nav-links {
+  list-style: none;         /* Remove default bullet points */
+  display: flex;            /* Lay links out horizontally */
+  gap: 2rem;                /* Even spacing between links */
+  margin: 0;                /* Remove browser default spacing */
+  padding: 0;
 }
-nav a:hover{
-    background-color: #36576b;
+
+/* ----- INDIVIDUAL LINKS ----- */
+.nav-links a {
+  text-decoration: none;    /* Remove underlines */
+  color: var(--light-background);              /* Dark text for readability */
+  font-weight: 500;         /* Slightly bold for emphasis */
+  font-size: 1rem;
+  transition: color 0.2s ease; /* Smooth hover transition */
 }
-nav .nav-links{
-    float: right;
-    min-width: 70px;
-    width: 10vw;
-}
-nav #nav-logo {
-    float: left;
-    width: 10em;
+
+/* ----- HOVER EFFECT ----- */
+.nav-links a:hover {
+  color: var(--accent-color);           /* Accent color on hover (oceanic blue vibe) */
 }
 
 
 /* Hero section */
 .hero {
-    background-image: url('/images/background.jpg');
+    background-image: url('images/background.jpg');
     height: 100vh; /* full screen height */
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    padding: 0 20px;
+    
     margin-top: 0px;
     background-size: cover;       /* ✅ makes it fill the section */
     background-position: center;  /* ✅ keeps the focal point centered */
@@ -73,6 +100,7 @@ nav #nav-logo {
 
   padding: 3rem;
   border-radius: 20px;
+  margin: 0 2rem;
 }
 
 .hero h1 {
@@ -99,14 +127,11 @@ nav #nav-logo {
 }
 
 /* INTRO */
-.intro {
-
+.intro{
+  padding-top: 5%;
 }
 .intro h1 {
-    padding-top: 100px;
-    padding-right: 100px;
-    padding-left: 100px;
-    
+    padding: 5rem 10%;
 }
 .intro p {
     padding: 100px;
@@ -115,13 +140,13 @@ nav #nav-logo {
 
 /* MISSION */
 
-.mission {
+.mission, .benefits {
     display: flex;
     justify-content: space-between;
     padding: 4rem 8%;
     align-items: center;
     gap: 2rem;
-    background-color: #fffcf2;
+    background-color: var(--light-background);
 }
 .mission-text {
     flex:1;
@@ -134,13 +159,12 @@ nav #nav-logo {
     
 }
 .mission-image img {
-  border-radius: 25px;
-  width: auto !important;
-  height: auto !important;
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
 }
+
 
 /* Benefits */
 .benefits-grid, .expectations-grid {
@@ -155,8 +179,8 @@ nav #nav-logo {
 
 .benefits-grid li, .expectations-grid li {
   font-size: larger;
-  color: white;
-  background-color: rgba(35,	56,	69);        /* light gray box */
+  color: var(--light-background);
+  background-color: var(--primary-color);        /* light gray box */
   padding: 1.5rem;
   border-radius: 12px;              /* rounded corners */
   box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* subtle shadow */
@@ -181,4 +205,17 @@ footer {
   height: auto;
   padding: 30px;
   margin-top: 30px;
+}
+
+
+/* TO TOP BUTTON */
+
+/* BACKSTORY */
+.backstory-text, .faq-item {
+    padding: 0 8%;
+
+}
+.faq {
+  background-color: var(--light-background);
+  padding: 1rem 10%;
 }
