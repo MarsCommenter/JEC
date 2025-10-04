@@ -1,6 +1,0 @@
-#233845
-#222222
-#efe8d9ff
-#fffcf2
-
-font: montserrat / poppins / candara
