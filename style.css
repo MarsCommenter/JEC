@@ -183,7 +183,7 @@ body p {
   background-color: var(--primary-color);        /* light gray box */
   padding: 1.5rem;
   border-radius: 12px;              /* rounded corners */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* subtle shadow */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* subtle shadow */
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s; /* hover effect */
 }
