@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+
+    --primary-color: #233845;
+    --secondary-color: #36576b;
+    --accent-color: #0077b6;
+    --background-color: #efe8d9ff;
+    --text-color: #222;
+    --light-background: #fffcf2;
+    --dark-text: #111;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+body{
+    padding-top: 80px;
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    text-align: center;
+    background-color: #efe8d9ff;   
+    color: #233845;
+    
+}
+body p {
+      font-size: 1.3rem;
+    }
+  
+
+/* NAV BAR */
+
+/* ----- NAVBAR CONTAINER ----- */
+.navbar {
+  position: fixed;          /* Keeps the navbar stuck to the top even when scrolling */
+  top: 0;                   /* Ensures it stays at the very top of the page */
+  left: 0;
+  width: 100%;              /* Stretch across the full screen width */
+  background: var(--primary-color);        /* Light background for good readability */
+  display: flex;            /* Allows logo and links to sit side by side */
+  justify-content: space-between; /* Push logo left and links right */
+  align-items: center;      /* Vertically center the items inside */
+  padding: 0.8rem 5%;       /* Comfortable spacing around content */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow to separate navbar visually */
+  z-index: 1000;            /* Ensures it stays above other elements */
+}
+
+/* ----- LOGO IMAGE ----- */
+.nav-logo img {
+  height: 50px;             /* Keeps logo size consistent */
+  width: auto;              /* Keeps aspect ratio */
+}
+
+/* ----- NAV LINKS CONTAINER ----- */
+.nav-links {
+  list-style: none;         /* Remove default bullet points */
+  display: flex;            /* Lay links out horizontally */
+  gap: 2rem;                /* Even spacing between links */
+  margin: 0;                /* Remove browser default spacing */
+  padding: 0;
+}
+
+/* ----- INDIVIDUAL LINKS ----- */
+.nav-links a {
+  text-decoration: none;    /* Remove underlines */
+  color: var(--light-background);              /* Dark text for readability */
+  font-weight: 500;         /* Slightly bold for emphasis */
+  font-size: 1rem;
+  transition: color 0.2s ease; /* Smooth hover transition */
+}
+
+/* ----- HOVER EFFECT ----- */
+.nav-links a:hover {
+  color: var(--accent-color);           /* Accent color on hover (oceanic blue vibe) */
+}
+
+
+/* Hero section */
+.hero {
+    background-image: url('images/background.jpg');
+    height: 100vh; /* full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+    margin-top: 0px;
+    background-size: cover;       /* ✅ makes it fill the section */
+    background-position: center;  /* ✅ keeps the focal point centered */
+    background-repeat: no-repeat;
+
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+
+  padding: 3rem;
+  border-radius: 20px;
+  margin: 0 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #233845;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #36576b;
+}
+
+/* INTRO */
+.intro{
+  padding-top: 5%;
+}
+.intro h1 {
+    padding: 5rem 10%;
+}
+.intro p {
+    padding: 100px;
+    padding-top: 0;
+}
+
+/* MISSION */
+
+.mission, .benefits {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 8%;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--light-background);
+}
+.mission-text {
+    flex:1;
+}
+
+.mission-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    
+}
+.mission-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+
+/* Benefits */
+.benefits-grid, .expectations-grid {
+  display: grid;                   /* turns list into grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsive columns */
+  gap: 10px;                        /* space between boxes */
+  list-style: none;                 /* removes bullets */
+  padding: 0;                       /* remove default padding */
+  margin-right: 6em;                   /* optional spacing */
+  margin-left: 6em;
+}
+
+.benefits-grid li, .expectations-grid li {
+  font-size: larger;
+  color: var(--light-background);
+  background-color: var(--primary-color);        /* light gray box */
+  padding: 1.5rem;
+  border-radius: 12px;              /* rounded corners */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* subtle shadow */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* hover effect */
+}
+
+.benefits-grid li:hover, .expectations-grid li:hover {
+  
+}
+
+/* Expectations */
+
+
+
+
+
+/* FOOTER */
+footer {
+  background-color: #233845;
+  color: white;
+  height: auto;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+
+/* TO TOP BUTTON */
+
+/* BACKSTORY */
+.backstory-text, .faq-item {
+    padding: 0 8%;
+
+}
+.faq {
+  background-color: var(--light-background);
+  padding: 1rem 10%;
+}
