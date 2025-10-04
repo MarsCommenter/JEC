@@ -188,9 +188,6 @@ body p {
   transition: transform 0.3s, box-shadow 0.3s; /* hover effect */
 }
 
-.benefits-grid li:hover, .expectations-grid li:hover {
-  
-}
 
 /* Expectations */
 
