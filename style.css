@@ -13,7 +13,14 @@
 * {
   box-sizing: border-box;
 }
-
+.light-bg {
+    background-color: var(--light-background);
+    padding: 30px;
+    margin: 20px 10px;
+}
+.section {
+    padding: 20px 20px;
+}
 
 body{
     padding-top: 80px;
@@ -72,7 +79,6 @@ body p {
   transition: color 0.2s ease; /* Smooth hover transition */
 }
 
-/* ----- HOVER EFFECT ----- */
 .nav-links a:hover {
   color: var(--accent-color);           /* Accent color on hover (oceanic blue vibe) */
 }
@@ -126,17 +132,6 @@ body p {
   background-color: #36576b;
 }
 
-/* INTRO */
-.intro{
-  padding-top: 5%;
-}
-.intro h1 {
-    padding: 5rem 10%;
-}
-.intro p {
-    padding: 100px;
-    padding-top: 0;
-}
 
 /* MISSION */
 
@@ -215,4 +210,14 @@ footer {
 .faq {
   background-color: var(--light-background);
   padding: 1rem 10%;
+}
+
+/* INPUTS & TEXT AREAS */
+input, textarea {
+  border: white solid 3px;
+  border-radius: 20px;
+  padding: 10px;
+  color: var(--light-background);
+  background-color: var(--secondary-color);
+  font-size: 1rem;
 }
