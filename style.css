@@ -222,18 +222,31 @@ input, textarea {
   font-size: 1rem;
 }
 
-.cards {
+.flex-container {
   display: flex;
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
+  /* border: 10px solid black; */
 }
-.card {
+.flex-item {
   background-color: var(--light-background);
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   width: 300px;
   padding: 20px;
   text-align: center;
+}
+.reverse-colour {
+  background-color: var(--primary-color);
+  color: var(--light-background);
+  opacity: 0.9;
+}
+.team img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 5px solid var(--accent-color);
 }

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+:root{
+    --primary-dark: #233845;
+    --secondary-dark: #36576b;
+    --accent-color: #edc84d;
+    --primary-light: rgb(235, 232, 232);
+    --secondary-light: #fffcf2;
+    --dark-text: #082051;
+    --light-text: #fefefe;
+}
+
+/* reset */
+body, p, a, ul, li{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/* base styles */
+body{
+    background: var(--primary-light);
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 20px;
+}
+.button{
+    background: var(--primary-dark);
+    color: var(--accent-color);
+    padding: 6px 15px;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s ease;
+    cursor: pointer;
+}
+.button:hover{
+    background: var(--accent-color);
+    color: var(--secondary-dark);
+}
+input, textarea{
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: solid 2px var(--secondary-dark);
+    color: var(--dark-text);
+}
+
+/* fonts */
+h1, h2, h3, h4, h5, h6{
+    color: var(--dark-text);
+    font-weight:normal;
+}
+p, a, li{
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+h1 {
+    font-size: 1.6em;
+}
+h2{
+    font-size: 1.4em;
+}
+h3{
+    font-size: 1.2em;
+}
+/* mobile styles */
+
+/* small tablet styles */
+@media screen and (max-width: 620px) {
+
+}
+/* large tablet + laptop styles */
+@media screen and (max-width: 960px) {
+    
+}
+/* desktop styles */
+@media screen and (max-width: 1200px) {
+    
+}
