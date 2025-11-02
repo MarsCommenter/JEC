@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Junior Economic Club</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="refresh-style.css">
+    <script src="../script.js"></script>
 </head>
 <body> 
 <!-- NAV BAR -->
-    <nav class="navbar">
-        <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="JEC LOGO"></a>
+    <nav>
+        <!-- <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="JEC LOGO"></a> -->
         <ul class="nav-links">
+            <li><a href="index.html">The JEC</a></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="events.html">Events</a></li>
+            <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li onclick=showSidebar() class="hideOnDesktop"><a><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="events.html">Events</a></li>
@@ -44,7 +55,7 @@
             <div class="flex">
                 <img src="images/mission.jpg" alt="Image of founders">
                 <p>
-                    Our mission is to inspire and empower the next generation of economists and business leaders by providing
+                    Our <strong>mission</strong> is to inspire and empower the next generation of economists and business leaders by providing
                     a supportive community where students can learn,
                     grow, and connect with like-minded peers.
                     We aim to promote economic literacy, critical thinking, and ethical leadership through a 
@@ -105,5 +116,14 @@
              <a href="mailto:hyderabbas@junioreconomicclub.org" class="button">Email Us</a>
         </section>
     </main>
+<footer>
+    <p>&copy; 2024 The Junior Economic Club. All rights reserved.</p>
+    <div class="social-media">
+        <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+    </div>
+</footer>
+
+
 </body>
 </html>
